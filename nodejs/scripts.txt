@@ -1,0 +1,2 @@
+"build": "babel src -d build",
+"dev": "node server.js",

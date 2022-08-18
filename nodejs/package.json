@@ -1,0 +1,26 @@
+{
+    "name": "nodejs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "parcel src/index.html",
+        "build": "parcel build src/index.html",
+        "start": "node app.js",
+        "prestart": "echo \"это prescr\"",
+        "poststart": "echo \"это postscr\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.18.1",
+        "joi": "^17.6.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.18.10",
+        "@babel/core": "^7.18.10",
+        "@babel/preset-env": "^7.18.10",
+        "parcel-bundler": "^1.12.5"
+    }
+}
