@@ -53,15 +53,31 @@ const players = [
         timePlayed: 310,
         points: 54,
         online: false,
+        rank: 800,
     },
-    { id: "player-2", name: "Poly", timePlayed: 470, points: 92, online: true },
-    { id: "player-3", name: "Kiwi", timePlayed: 230, points: 48, online: true },
+    {
+        id: "player-2",
+        name: "Poly",
+        timePlayed: 470,
+        points: 92,
+        online: true,
+        rank: 600,
+    },
+    {
+        id: "player-3",
+        name: "Kiwi",
+        timePlayed: 230,
+        points: 48,
+        online: true,
+        rank: 100,
+    },
     {
         id: "player-4",
         name: "Ajax",
         timePlayed: 150,
         points: 71,
         online: false,
+        rank: 400,
     },
     {
         id: "player-5",
@@ -69,6 +85,7 @@ const players = [
         timePlayed: 80,
         points: 48,
         online: true,
+        rank: 60,
     },
 ];
 
@@ -106,4 +123,61 @@ const tweets = [
 ];
 
 const tags = tweets.flatMap((t) => t.tags);
-console.log(tags);
+// console.log(tags);
+
+/*
+ * Цепочки вызовов - chaining
+ */
+
+const greaterThenTwo = numbers.filter((num) => num > 2);
+// console.log(greaterThenTwo);
+
+const multByThree = greaterThenTwo.map((num) => num * 3);
+//console.log(multByThree);
+
+const sorted = multByThree.sort((a, b) => a - b);
+//console.log(sorted);
+
+//Цепочка предыдущих трёх
+
+const chainSorted = numbers
+    .filter((num) => num > 2)
+    .map((num) => num * 3)
+    .sort((a, b) => a - b);
+
+// console.log(chainSorted);
+
+/*
+ * Сортируем тех кто онлан по рангу
+ * - сначала фильтруем
+ * - потом сортируем
+ */
+
+const onlineAndSorted = players
+    .filter((player) => player.online)
+    .sort((a, b) => a.rank - b.rank);
+
+// console.log(onlineAndSorted);
+
+/*
+ * Chaining в методах объекта как jquery
+ */
+
+// необходимо возвращать this (ссылку) в каждой функции
+const element = {
+    class: "",
+    hovered: false,
+    changeClass(cls) {
+        this.class = cls;
+
+        return this;
+    },
+    toggleHovered() {
+        this.hovered = !this.hovered;
+
+        return this;
+    },
+};
+
+element.toggleHovered().changeClass("open");
+// console.log(element);
