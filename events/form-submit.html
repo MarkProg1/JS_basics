@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    </head>
+    <body>
+        <h1>Событие сабмита формы</h1>
+        <p><a href="./index.html">На главную</a></p>
+        <form class="js-register-form">
+            <div role="group">
+                <label
+                    >Name <input name="name" type="text" autocomplete="off"
+                /></label>
+
+                <label
+                    >Email <input name="email" type="email" autocomplete="off"
+                /></label>
+
+                <label
+                    >Password
+                    <input name="password" type="password" autocomplete="off"
+                /></label>
+            </div>
+            <br />
+            <div role="group">
+                <b>Выбирите тим подписки:</b>
+                <label>
+                    <input type="radio" name="subscription" value="free" />
+                    Free
+                </label>
+                <label>
+                    <input type="radio" name="subscription" value="basic" />
+                    Basic
+                </label>
+                <label>
+                    <input type="radio" name="subscription" value="pro" />
+                    Pro
+                </label>
+            </div>
+            <br />
+            <button type="submit">Сабмит</button>
+        </form>
+        <script src="02-forms.js"></script>
+    </body>
+</html>
