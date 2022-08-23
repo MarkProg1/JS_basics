@@ -1,0 +1,19 @@
+<section>
+    <div>
+        <h1>Список товаров</h1>
+        <ul>
+            {{#each products}}
+                <li>
+                    <div class="card">
+                        <img src="{{image}}" alt="{{name}}" />
+                        <div class="container">
+                            <h2>{{name}}</h2>
+                            <p>Цена: {{price}}</p>
+                            <button>В корзину</button>
+                        </div>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</section>
