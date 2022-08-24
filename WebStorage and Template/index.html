@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    </head>
+    <body>
+        <form class="js-feedback-form">
+            <label>
+                <b>Имя</b>
+                <br />
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Введите ваше имя"
+                    value="Анонимус"
+                />
+            </label>
+            <label>
+                <br />
+                <b>Сообщение</b>
+                <br />
+                <textarea name="message" row="6"></textarea>
+            </label>
+            <br />
+            <button type="submit">Оставить отзыв</button>
+        </form>
+        <ul class="gallery js-gallery"></ul>
+
+        <!-- <template id="list-item">
+            {{#each items}}
+            <li>{{this}}</li>
+            {{/each}}
+        </template> -->
+
+        <script src="./js/templating.js"></script>
+        <!-- <script src="./js/localStorage.js"></script> -->
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script> -->
+
+        <!-- <script>
+            const html = document.querySelector("#list-item").innerHTML.trim();
+
+            const tech = ["HTML", "CSS", "JS", "React"];
+
+            const template = Handlebars.compile(html);
+
+            const markup = template({ items: tech });
+
+            const galleryRef = document.querySelector(".js-gallery");
+            galleryRef.insertAdjacentHTML("beforeend", markup);
+        </script> -->
+    </body>
+</html>
